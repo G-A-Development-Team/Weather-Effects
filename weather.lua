@@ -301,7 +301,6 @@ local function on_draw()
 
     SETTINGS.density = gui.GetValue( "esp.local.gadev_w_density" )
     
-    print( SETTINGS.density )
     -- Early out: FIXED to also respect mode being empty
     if not SETTINGS.enabled or SETTINGS.mode == "" then
         return
@@ -366,7 +365,6 @@ local function on_draw()
         if v then vx, vy = v.x or 0, v.y or 0 end
         local spd2 = vx*vx + vy*vy
         local speed = math.sqrt(spd2)
-        print( speed )
 
         -- Components in local view space
         local speed_fwd  = vx * fwd_x + vy * fwd_y
