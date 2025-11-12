@@ -90,7 +90,7 @@ bToggle:SetWidth( 50 )
 local mbType = gui.Multibox( gbWeather, "Weather Type" )
 local bRain = gui.Checkbox( mbType, "gadev_w_rain", "Rain", false )
 local bSnow = gui.Checkbox( mbType, "gadev_w_snow", "Snow", false )
-local sIntensity = gui.Slider( gbWeather, "gadev_w_intensity", "Movement Intensity", 0.7, 0, 1, 0.1 )
+local sIntensity = gui.Slider( gbWeather, "gadev_w_intensity", "Movement Intensity", 0.7, 0, 2, 0.1 )
 local sParticleIntensity = gui.Slider( gbWeather, "gadev_w_density", "Particle Density", 0.3, 0, 1, 0.1 )
 
 -- =============================
@@ -382,7 +382,7 @@ local function on_draw()
             length_scale = 1.0
         else
             -- Strafing effect: moving right -> wind to left, moving left -> wind to right
-            local I = clamp(SETTINGS.intensity or 1.0, 0.2, 3.0)
+            local I = gui.GetValue( "esp.local.gadev_w_intensity" )
 
             local strafe_strength = (SETTINGS.mode == "rain" and 520 or 180) * I
             if speed_right > 20 then
