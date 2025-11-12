@@ -1,0 +1,18 @@
+{
+  "weeks": [
+    {
+      "week": "11-11-2025",
+      "title": "Creation of Weather Effects",
+      "author": "Agentsix1 : 316884",
+      "items": [
+        "Added Rain",
+        "Added Snow",
+        "Added Mix (Rain and Snow)",
+        "Movement effects how weather falls",
+        "Ability to adjust intensity of weather movement",
+        "Ability to adjust the denisity of rain/snow",
+        "Added analytics"
+      ]
+    },
+  ]
+}
